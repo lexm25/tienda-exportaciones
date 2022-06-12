@@ -1,0 +1,31 @@
+<h1>Articles</h1>
+
+<div>
+  <table class="table text-white">
+    <thead>
+      <th>ID</th>
+      <th>TITLE</th>
+      <th>BODY</th>
+      <th>AUTHOR</th>
+    </thead>
+    <tbody *ngIf="articles.length">
+                              <!--variable articles (articles.component.ts)-->
+      <tr *ngFor="let article of articles">
+        <td>{{ article.id }}</td>
+        <td>{{ article.nombre }}</td>
+        <td>{{ article.descripcion }}</td>
+        <td>{{ article.procedencia }}</td>
+        <td>
+          <button class="btn btn-info" routerLink="/edit/{{article.id}}">Edit</button>&nbsp;
+          <button class="btn btn-danger" (click)="deleteArticle(article.id)">Delete</button>&nbsp;
+          <button class="btn btn-danger" routerLink="/info/{{article.id}}">Info</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div>
+  <button class="btn btn-primary" routerLink="/add">Add New Article</button>
+</div>
+
+

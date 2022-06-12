@@ -1,0 +1,28 @@
+<div class="b-example-divider"></div>
+<form class="text-white">
+  <div class="mb-3">
+    <img src="https://us.123rf.com/450wm/koblizeek/koblizeek1902/koblizeek190200055/125337077-no-image-vector-symbol-missing-available-icon-no-gallery-for-this-moment-.jpg?ver=6">
+    <input type="text" class="form-control" name="Nombre" [(ngModel)]="article.nombre">
+  </div>
+
+  <div class="mb-3">
+    <label for="articleNombre" class="form-label">Nombre</label>
+    <input type="text" class="form-control" name="Nombre" [(ngModel)]="article.nombre">
+  </div>
+  <div class="mb-3">
+    <label for="articleDescripcion" class="form-label">Descripcion</label>
+    <textarea class="form-control" name="Descripcion" [(ngModel)]="article.descripcion" rows="3"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="articleFamilia" class="form-label">Familia</label>
+    <input type="text" class="form-control" name="Familia" [(ngModel)]="article.familia">
+  </div>
+  <div class="mb-3">
+    <label for="articleProcedencia" class="form-label">Procedencia</label>
+    <input type="text" class="form-control" name="Procedencia" [(ngModel)]="article.procedencia">
+  </div>
+
+  <div>
+    <button type="button" class="btn btn-success" (click)="update()">Update</button>
+  </div>
+</form>

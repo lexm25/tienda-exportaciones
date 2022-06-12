@@ -1,0 +1,53 @@
+<!--<form class="text-white">
+  <div class="mb-3">
+    <label for="articletitle" class="form-label">Article Title</label>
+    <input type="text" class="form-control" name="title" [(ngModel)]="article.title">
+  </div>
+  <div class="mb-3">
+    <label for="articlebody" class="form-label">Article Body</label>
+    <textarea class="form-control" name="body" [(ngModel)]="article.body" rows="3"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="articleauthor" class="form-label">Article Author</label>
+    <input type="email" class="form-control" name="author" [(ngModel)]="article.author">
+  </div>
+
+  <div>
+    <button type="button" class="btn btn-success" (click)="update()">Update</button>
+  </div>
+</form>-->
+
+<div class="container center">
+  <div class="abs-center mt-5">
+    <div class="col-8 card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img
+            src="https://us.123rf.com/450wm/koblizeek/koblizeek1902/koblizeek190200055/125337077-no-image-vector-symbol-missing-available-icon-no-gallery-for-this-moment-.jpg?ver=6"
+            class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">{{article.nombre}}</h5>
+            <p class="card-text">{{article.descripcion}}</p>
+            <p class="card-text"><small class="text-muted">{{article.procedencia}}</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="abs-center">
+    <form id="form-center display-flex">
+      <select class="form-select form-select-sm mt-3">
+        <option selected>Elige opción</option>
+        <option value="1">{{article.id}}</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+      <br>
+      <input type="number" id="quantity_62672d29dda2b" class="input-text qty text" step="1" min="1" max=""
+        name="quantity" title="Cantidad" size="4" pattern="[0-9]*" inputmode="numeric" placeholder="cantidad">
+    </form>
+  </div>
+  <div id="center" class="mt-5"><button type="submit" class="btn btn-danger">Añadir al carro</button></div>
+</div>
