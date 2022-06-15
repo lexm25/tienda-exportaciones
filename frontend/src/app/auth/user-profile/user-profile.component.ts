@@ -8,6 +8,7 @@ export class User {
   id:any;
   rol:any;
   telefono:any;
+  direccion:any;
 }
 @Component({
   selector: 'app-user-profile',

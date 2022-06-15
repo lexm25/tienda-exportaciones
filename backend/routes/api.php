@@ -28,7 +28,13 @@ Route::group([
     Route::post('/logout', [AuthController::class, 'logout']);
     Route::post('/refresh', [AuthController::class, 'refresh']);
     Route::get('/user-profile', [AuthController::class, 'userProfile']);
+    Route::put('/article/{id}',[ArticleController::class,'update']);
+    Route::delete('/article/{id}',[ArticleController::class,'destroy']);
 });
+
+Route::put('/user/{id}',[Controller::class,'update']);
+
+Route::delete('/user/{id}',[Controller::class,'destroy']);
 
 Route::get('/article/{id}',function($id){
     return new ArticleResource(Article::findOrFail($id));

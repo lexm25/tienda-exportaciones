@@ -50,9 +50,11 @@ class ArticleController extends Controller
     {
         if (Article::where('id',$id)->exists()) {
             $article = Article::find($id);
-            $article->title = $request->title;
-            $article->body = $request->body;
-            $article->author = $request->author;
+            $article->nombre = $request->nombre;
+            $article->descripcion = $request->descripcion;
+            $article->familia = $request->familia;
+            $article->procedencia = $request->procedencia;
+            $article->imagen = $request->imagen;
 
             $article->save();
             return response()->json([

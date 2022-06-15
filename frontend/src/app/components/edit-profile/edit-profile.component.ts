@@ -3,11 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute,Router } from '@angular/router';
 
 @Component({
-  selector: 'app-edit-article',
-  templateUrl: './edit-article.component.html',
-  styleUrls: ['./edit-article.component.scss']
+  selector: 'app-edit-profile',
+  templateUrl: './edit-profile.component.html',
+  styleUrls: ['./edit-profile.component.scss']
 })
-export class EditArticleComponent implements OnInit {
+export class EditProfileComponent implements OnInit {
 
   articleId: any;
   article: any = {};

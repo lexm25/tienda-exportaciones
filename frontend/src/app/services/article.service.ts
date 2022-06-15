@@ -29,7 +29,7 @@ export class ArticleService {
     return this.http.get(this.url+`/api/article/`+id);
   }
 
-  update(id:number, article:any): Observable<any>{
+  updateArticle(id:number, article:any): Observable<any>{
     return this.http.put(this.url+`/api/article/`+id, article, this.httpOptions);
   }
 

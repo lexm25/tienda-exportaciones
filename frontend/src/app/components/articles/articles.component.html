@@ -4,19 +4,22 @@
   <table class="table text-white">
     <thead>
       <th>ID</th>
-      <th>TITLE</th>
-      <th>BODY</th>
-      <th>AUTHOR</th>
+      <th>NOMBRE</th>
+      <th>DESCRIPCIÓN</th>
+      <th>FAMILIA</th>
+      <th>PROCEDENCIA</th>
+      <th>IMAGEN</th>
     </thead>
     <tbody *ngIf="articles.length">
-                              <!--variable articles (articles.component.ts)-->
       <tr *ngFor="let article of articles">
         <td>{{ article.id }}</td>
+        <td><img src="{{article.imagen}}" style="width: 200px;"></td>
         <td>{{ article.nombre }}</td>
         <td>{{ article.descripcion }}</td>
         <td>{{ article.procedencia }}</td>
+        <td>{{ article.familia }}</td>
         <td>
-          <button class="btn btn-info" routerLink="/edit/{{article.id}}">Edit</button>&nbsp;
+          <button class="btn btn-info" routerLink="/edit/{{article.id}}">Edit</button>
           <button class="btn btn-danger" (click)="deleteArticle(article.id)">Delete</button>&nbsp;
           <button class="btn btn-danger" routerLink="/info/{{article.id}}">Info</button>
         </td>

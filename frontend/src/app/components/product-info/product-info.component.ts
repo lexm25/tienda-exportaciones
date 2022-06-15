@@ -26,7 +26,7 @@ export class ProductInfoComponent implements OnInit {
   }
 
   update(){
-    this.articleService.update(this.articleId, this.article).subscribe((res)=>{
+    this.articleService.updateArticle(this.articleId, this.article).subscribe((res)=>{
       this.router.navigateByUrl('/articles');
     });
   }

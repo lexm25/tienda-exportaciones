@@ -16,11 +16,11 @@ export class NewArticleComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  add(articleTitle:string, articleBody:string, articleAuthor:string){
+  add(articleNombre:string, articleDescripcion:string, articleFamilia:string){
     this.articles = {
-      'title': articleTitle,
-      'body': articleBody,
-      'author': articleAuthor
+      'nombre': articleNombre,
+      'descripcion': articleDescripcion,
+      'familia': articleFamilia,
     };
     this.ArticleService.addArticle(this.articles as any).subscribe(article=>{
       this.articles=article;

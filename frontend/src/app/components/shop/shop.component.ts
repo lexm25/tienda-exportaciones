@@ -15,6 +15,7 @@ export class ShopComponent implements OnInit {
   articles: any = [];
   ngOnInit(): void {
     this.showArticles();
+    this.getData();
   }
 
   showArticles(){
